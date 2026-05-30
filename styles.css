@@ -165,7 +165,7 @@ h1 {
   text-decoration: none;
   border: 1px solid rgba(23, 49, 47, 0.13);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.82);
+  background: #ffffff;
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
@@ -174,9 +174,12 @@ h1 {
 .app-card::before {
   position: absolute;
   inset: 0;
+  z-index: 1;
   content: "";
   opacity: 0.9;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.64) 48%, rgba(255, 255, 255, 0.24) 100%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0));
   pointer-events: none;
 }
 
@@ -195,7 +198,7 @@ h1 {
 
 .app-card > * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .app-card:hover,
@@ -207,29 +210,28 @@ h1 {
 }
 
 .icon-wrap,
-.open-icon,
-.card-art {
+.open-icon {
   display: inline-grid;
   place-items: center;
 }
 
-.card-art {
+.card-photo {
   position: absolute;
-  right: 20px;
-  bottom: 18px;
+  inset: 0;
   z-index: 0;
-  width: 138px;
-  height: 138px;
-  color: currentColor;
-  opacity: 0.18;
-  transform: rotate(-8deg);
+  height: 100%;
+  background-image: var(--photo);
+  background-position: center;
+  background-size: cover;
+  filter: saturate(1.08) contrast(1.04);
   pointer-events: none;
 }
 
-.card-art svg {
-  width: 116px;
-  height: 116px;
-  stroke-width: 1.35;
+.card-photo::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(23, 49, 47, 0.08));
 }
 
 .icon-wrap {
@@ -276,18 +278,22 @@ h1 {
 
 .app-card-esg {
   color: var(--green);
+  --photo: url("https://source.unsplash.com/900x700/?zero-waste,recycling,sustainability");
 }
 
 .app-card-delivery {
   color: var(--teal);
+  --photo: url("https://source.unsplash.com/900x700/?delivery-truck,logistics");
 }
 
 .app-card-packing {
   color: var(--amber);
+  --photo: url("https://source.unsplash.com/900x700/?packing-box,warehouse");
 }
 
 .app-card-order {
   color: var(--coral);
+  --photo: url("https://source.unsplash.com/900x700/?coffee-grinder,coffee-beans");
 }
 
 .app-copy {
@@ -365,17 +371,10 @@ h1 {
     align-items: center;
   }
 
-  .card-art {
-    right: 54px;
-    bottom: 6px;
-    width: 112px;
-    height: 112px;
-    opacity: 0.13;
-  }
-
-  .card-art svg {
-    width: 94px;
-    height: 94px;
+  .card-photo {
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .app-copy {
@@ -416,16 +415,10 @@ h1 {
     grid-row: 2;
   }
 
-  .card-art {
-    right: 14px;
-    bottom: 10px;
-    width: 96px;
-    height: 96px;
-  }
-
-  .card-art svg {
-    width: 82px;
-    height: 82px;
+  .card-photo {
+    inset: auto 0 0;
+    width: 100%;
+    height: 58%;
   }
 
   .app-title {
