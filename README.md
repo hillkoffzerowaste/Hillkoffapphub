@@ -7,7 +7,7 @@
 - Hillkoff ESG: https://esg-platform-ten.vercel.app/?code=96275c60-85ab-4a93-b28f-67ee1f7a14af
 - Hillkoff Delivery System: https://repo-rho-livid.vercel.app/
 - Hillkoff Packing: https://hillkoffpacking-system-backend.vercel.app/
-- Hillkoff HK-1 Order: https://hillkoff-hk-1-order.vercel.app/
+- Hillkoff HK-1 Grind Order: https://hillkoff-hk-1-order.vercel.app/
 
 ## Deploy to Vercel
 
