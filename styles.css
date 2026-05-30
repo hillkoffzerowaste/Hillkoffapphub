@@ -182,13 +182,13 @@ h1 {
 
 .app-card::after {
   position: absolute;
-  right: -46px;
-  bottom: -56px;
-  width: 152px;
-  height: 152px;
+  right: -38px;
+  bottom: -46px;
+  width: 170px;
+  height: 170px;
   content: "";
   border-radius: 999px;
-  opacity: 0.16;
+  opacity: 0.14;
   background: currentColor;
   pointer-events: none;
 }
@@ -207,9 +207,29 @@ h1 {
 }
 
 .icon-wrap,
-.open-icon {
+.open-icon,
+.card-art {
   display: inline-grid;
   place-items: center;
+}
+
+.card-art {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  z-index: 0;
+  width: 138px;
+  height: 138px;
+  color: currentColor;
+  opacity: 0.18;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
+.card-art svg {
+  width: 116px;
+  height: 116px;
+  stroke-width: 1.35;
 }
 
 .icon-wrap {
@@ -274,6 +294,7 @@ h1 {
   display: grid;
   align-content: end;
   gap: 10px;
+  padding-right: 10px;
 }
 
 .app-title {
@@ -344,6 +365,19 @@ h1 {
     align-items: center;
   }
 
+  .card-art {
+    right: 54px;
+    bottom: 6px;
+    width: 112px;
+    height: 112px;
+    opacity: 0.13;
+  }
+
+  .card-art svg {
+    width: 94px;
+    height: 94px;
+  }
+
   .app-copy {
     align-content: center;
   }
@@ -380,6 +414,18 @@ h1 {
   .app-copy {
     grid-column: 1 / -1;
     grid-row: 2;
+  }
+
+  .card-art {
+    right: 14px;
+    bottom: 10px;
+    width: 96px;
+    height: 96px;
+  }
+
+  .card-art svg {
+    width: 82px;
+    height: 82px;
   }
 
   .app-title {
