@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Hillkoff web app hub รวมลิงก์สำหรับเข้าใช้งานระบบ ESG, Delivery และ Packing"
+      content="Hillkoff web app hub รวมลิงก์สำหรับเข้าใช้งานระบบ ESG, Delivery, Packing และ Order"
     />
     <title>Hillkoff Web App Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,17 +19,30 @@
   <body>
     <main class="shell">
       <section class="intro" aria-labelledby="page-title">
-        <div class="brand-mark" aria-hidden="true">H</div>
-        <p class="eyebrow">Hillkoff Group</p>
-        <h1 id="page-title">Web App Hub</h1>
-        <p class="lead">
-          รวมทางเข้าเว็บแอพทั้ง 3 ระบบ สำหรับกดเปิดดูงานจากลิงก์กลางเดียว
-        </p>
+        <div class="intro-copy">
+          <div class="brand-row">
+            <div class="brand-mark" aria-hidden="true">H</div>
+            <div>
+              <p class="eyebrow">Hillkoff Group</p>
+              <p class="subhead">Executive web access</p>
+            </div>
+          </div>
+          <h1 id="page-title">Web App Hub</h1>
+          <p class="lead">
+            รวมทางเข้าเว็บแอพสำคัญของ Hillkoff ไว้ในหน้าเดียว สำหรับเปิดดูงานและทดสอบระบบได้รวดเร็ว
+          </p>
+        </div>
+
+        <div class="summary-panel" aria-label="Hub summary">
+          <span class="summary-number">4</span>
+          <span class="summary-text">Web Apps</span>
+          <span class="summary-note">พร้อมกดเข้าใช้งาน</span>
+        </div>
       </section>
 
       <section class="app-grid" aria-label="Hillkoff web applications">
         <a
-          class="app-card"
+          class="app-card app-card-esg"
           href="https://esg-platform-ten.vercel.app/?code=96275c60-85ab-4a93-b28f-67ee1f7a14af"
           target="_blank"
           rel="noopener noreferrer"
@@ -47,7 +60,7 @@
         </a>
 
         <a
-          class="app-card"
+          class="app-card app-card-delivery"
           href="https://repo-rho-livid.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
@@ -65,7 +78,7 @@
         </a>
 
         <a
-          class="app-card"
+          class="app-card app-card-packing"
           href="https://hillkoffpacking-system-backend.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
@@ -76,6 +89,24 @@
           <span class="app-copy">
             <span class="app-title">Hillkoff Packing</span>
             <span class="app-desc">หน้าแดชบอร์ดสำหรับติดตามและจัดการงาน Packing</span>
+          </span>
+          <span class="open-icon" aria-hidden="true">
+            <i data-lucide="external-link"></i>
+          </span>
+        </a>
+
+        <a
+          class="app-card app-card-order"
+          href="https://hillkoff-hk-1-order.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="icon-wrap icon-order" aria-hidden="true">
+            <i data-lucide="shopping-bag"></i>
+          </span>
+          <span class="app-copy">
+            <span class="app-title">Hillkoff HK-1 Order</span>
+            <span class="app-desc">ระบบสำหรับจัดการและตรวจสอบรายการสั่งซื้อ</span>
           </span>
           <span class="open-icon" aria-hidden="true">
             <i data-lucide="external-link"></i>
